@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  remove the project by word filtering in Github Trending
 // @author       miao1007
-// @match        https://github.com/trending
+// @include        https://github.com/trending*
 // @grant        none
 // ==/UserScript==
 
@@ -34,12 +34,11 @@
         }
         repos.forEach(repo=>{
             var text = repo.textContent.replace(/[\s\n\r]+/gm,' ');
-            keywords.forEach(regex => {
-                if(regex.test(text)){
-                    hiddenRepos.add(repo);
-                    repo.style.display = "none !important"
-                }
-            })
+            var matched = keywords.find(regex=>regex.test(text))
+            if(matched){
+                hiddenRepos.add(repo);
+                repo.setAttribute("style","display: none !important")
+            }
         })
         if(hiddenRepos.size){
             var div = document.createElement("div");
