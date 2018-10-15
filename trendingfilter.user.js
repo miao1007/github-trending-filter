@@ -43,7 +43,7 @@
         if(hiddenRepos.size){
             var div = document.createElement("div");
             div.className += "col-12 d-block width-full py-4 border-bottom";
-            repoList.insertBefore(div, repoList.children[0]);
+            repoList.insertBefore(div)
             div.appendChild(document.createTextNode("Some results were removed by the Github Trending Filter extension ("))
             var a = document.createElement("a");
             a.textContent = 'show';
