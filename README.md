@@ -43,7 +43,7 @@ In China, while Github is not self-censorship and is unblocked by Administrator,
 
 I create a tampermonkey script removes project by **personal** keywords in github-trending
 
-![trending filter](trending filter.png)
+![trending filter](trending%20filter.png)
 
 # Install 
 
