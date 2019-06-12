@@ -20,8 +20,9 @@
      * @param {Array} keywords regexp list
      */
     function hideByFilter(keywords){
-        var repoList = window.document.querySelector('.repo-list');
-        var repos = repoList.querySelectorAll('li');
+        var repoList = window.document.querySelector('.col-md
+-9 .Box');
+        var repos = repoList.querySelectorAll('article');
         var hiddenRepos = new Set();
         var show = function(e){
             repoList.style.display=""
