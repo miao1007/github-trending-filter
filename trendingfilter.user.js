@@ -20,7 +20,7 @@
      * @param {Array} keywords regexp list
      */
     function hideByFilter(keywords){
-        var repoList = window.document.querySelector('.col-md-9 .Box');
+        var repoList = window.document.querySelector('.explore-pjax-container .Box');
         var repos = repoList.querySelectorAll('article');
         var hiddenRepos = new Set();
         var show = function(e){
